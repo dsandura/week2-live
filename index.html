@@ -10,17 +10,18 @@
     <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="//code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
     <script>
-    document.ready(function () {
-      $('#save').on('click', function (el) {
-        alert('SAVE: ' + el.text());
-      })
-    })
+    $( "#task-page" ).on( "pagecreate", function( event ) {
+      $('#save').on('click', function ( event ) {
+        console.dir(event);
+        alert(event);
+      });
+    });
     </script>
   </head>
 
   <body>
 
-    <div data-role="page">
+    <div id="task-page" data-role="page">
       <div data-role='header' data-nobackbtn='true'>
         <h1>Live Fire!</h1>
       </div>
